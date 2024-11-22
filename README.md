@@ -1,103 +1,93 @@
-**Dyslexia Detection Using Deep Learning**<br>
-This repository contains the code and resources for our final year project, Dyslexia Detection Using Deep Learning, which leverages machine learning and image processing to help detect dyslexia in students. This project is designed to create a computer-based learning model that assesses dyslexia risk by analyzing specific test scores and user inputs.<br>
+<h1>Dyslexia Detection Using Deep Learning</h1>
 
-**Table of Contents**
-**About the Project
-Project Structure
-Dataset
-Model Architecture
-Technologies Used
-Setup and Installation
-Usage
-Contributing
-License
-Contact
-About the Project**<br>
-Dyslexia affects reading and learning abilities, often remaining undiagnosed in many students. Our project aims to address this issue by using deep learning techniques to detect dyslexia tendencies based on students’ interaction with a computer-based test. The model is trained to identify dyslexia based on specific visual and interaction cues.
+   <p>This repository contains the code and resources for a final year project that leverages machine learning and image processing to help detect dyslexia in students.</p>
 
-**Objective:** Develop a web-based application that allows students to take a series of tests, analyze their scores and responses, and provide insights on dyslexia risk.<br>
+  <h2>About the Project</h2>
+    <p>Dyslexia affects reading and learning abilities, often remaining undiagnosed in many students. Our project aims to address this issue by using deep learning techniques to detect dyslexia tendencies based on students' interaction with a computer-based test.</p>
 
-**Project Structure**
+  <h2>Objective</h2>
+    <p>Develop a web-based application that allows students to take a series of tests, analyze their scores and responses, and provide insights on dyslexia risk.</p>
+
+  <h2>Project Structure</h2>
+    <pre>
 dyslexia-detection/
 │
-├── data/                    # Folder for storing training, validation, and testing datasets
+├── data/                    # Training and testing datasets
 ├── models/                  # Trained model files
-├── notebooks/               # Jupyter notebooks for experiments and model training
+├── notebooks/               # Jupyter notebooks
 ├── src/
 │   ├── app.py               # Main application file
-│   ├── model.py             # Deep learning model definition and training scripts
-│   ├── preprocess.py        # Data preprocessing scripts
+│   ├── model.py             # Model definition and training
+│   ├── preprocess.py        # Data preprocessing
 │   └── utils.py             # Helper functions
 │
-├── templates/               # HTML templates for the web interface
-├── static/                  # Static files (CSS, JS)
-├── README.md                # Project readme file
-└── requirements.txt         # Required Python packages<br>
-**Dataset**
-The dataset used in this project includes a variety of visual and interactive metrics gathered through user inputs and responses during test sessions. Please note that actual dataset details, source, and any pre-processing steps are discussed in the notebook notebooks/data_preprocessing.ipynb.
+├── templates/               # Web interface HTML
+├── static/                  # Static files
+├── README.md                # Project readme
+└── requirements.txt         # Python packages
+    </pre>
 
-Note: Due to privacy and ethical considerations, the dataset is not publicly available in this repository.
+  <h2>Model Architecture</h2>
+    <p>Our deep learning model combines:</p>
+    <ul>
+        <li>Convolutional Neural Networks (CNN) for image processing</li>
+        <li>Recurrent Neural Networks (RNN) for sequence analysis</li>
+        <li>Dense layers for feature consolidation and classification</li>
+    </ul>
 
-**Model Architecture**
-Our deep learning model uses a combination of convolutional neural networks (CNN) and recurrent neural networks (RNN) to process both image and sequence data. Key components include:
+  <h2>Technologies Used</h2>
+    <ul>
+        <li>Framework: TensorFlow/Keras</li>
+        <li>Web Framework: Flask</li>
+        <li>Database: MongoDB</li>
+        <li>Frontend: HTML, CSS, JavaScript</li>
+        <li>Libraries: NumPy, Pandas, OpenCV</li>
+    </ul>
 
-Image Processing Module: Extracts features from visual inputs (e.g., response patterns).
-Sequence Analysis Module: Analyzes the time series and sequential patterns in user responses.
-Dense Layers: Fully connected layers to consolidate features and classify dyslexia risk.
-The final model is trained using a combination of categorical cross-entropy and mean squared error loss.
+   <h2>Setup and Installation</h2>
+    <h3>Prerequisites</h3>
+    <ul>
+        <li>Python 3.7+</li>
+        <li>MongoDB</li>
+        <li>pip</li>
+    </ul>
 
-**Technologies Used**
-Framework: TensorFlow/Keras
-Web Framework: Flask
-Database: MongoDB (for storing user data and test results)
-Frontend: HTML, CSS, JavaScript
-Other Libraries: NumPy, Pandas, OpenCV
-Setup and Installation
-To get a local copy up and running, follow these steps:
-
-**Prerequisites**
-Python 3.7 or higher
-MongoDB server
-pip package manager
-Installation
-Clone the repository:
-
+  <h3>Installation Steps</h3>
+    <pre><code>
+# Clone the repository
 git clone https://github.com/sagarbhoge2003/dyslexia-detection.git
 cd dyslexia-detection
-Install dependencies:
 
+# Install dependencies
 pip install -r requirements.txt
-Run the MongoDB server (if not already running):
 
+# Run MongoDB server
 mongod
-Start the application:
 
+# Start the application
 python src/app.py
-Open your browser and go to http://127.0.0.1:5000 to access the application.
+    </code></pre>
 
-**Usage**
-Upload Data: Users can input data or upload relevant files for analysis.
-Run Model: The application processes the data through the trained deep learning model.
-View Results: Based on the model’s output, the app will provide feedback on potential dyslexia risk.
-Example Usage
-To analyze a new user’s data, follow these steps:
+  <h2>Usage</h2>
+    <ol>
+        <li>Go to the "Start Test" page</li>
+        <li>Complete the assessment</li>
+        <li>View results showing dyslexia risk and recommendations</li>
+    </ol>
 
-Go to the "Start Test" page and begin the assessment.
-After completion, view the results on the results page.
-The report will show the likelihood of dyslexia and suggest possible next steps.
-Contributing
-We welcome contributions to enhance this project. If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcomed.
+   <h2>Contributing</h2>
+    <ol>
+        <li>Fork the Project</li>
+        <li>Create Feature Branch</li>
+        <li>Commit Changes</li>
+        <li>Push to Branch</li>
+        <li>Open Pull Request</li>
+    </ol>
 
-Fork the Project
-Create your Feature Branch (git checkout -b feature/FeatureName)
-Commit your Changes (git commit -m 'Add some FeatureName')
-Push to the Branch (git push origin feature/FeatureName)
-Open a Pull Request
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+   <h2>License</h2>
+    <p>MIT License</p>
 
-**Contact**
-Project Team:
-
-Shaggy - Lead Developer - **sagarbhoge2003@gmail.com**
-GitHub Profile : https://github.com/sagarbhoge2003
+   <h2>Contact</h2>
+    <p>Shaggy - Lead Developer</p>
+    <p>Email: sagarbhoge2003@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/sagarbhoge2003">https://github.com/sagarbhoge2003</a></p>
